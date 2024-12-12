@@ -23,7 +23,7 @@ def chat():
 
 
         # Send request to Dhenu API
-        client = OpenAI(base_url="https://api.dhenu.ai/v1", api_key=dh-d_mYtfQEWSKSMCfPBVcjoNHuEStalCfnE1vKTiUy2vs)
+        client = OpenAI(base_url="https://api.dhenu.ai/v1", api_key={dh-d_mYtfQEWSKSMCfPBVcjoNHuEStalCfnE1vKTiUy2vs})
         stream = client.chat.completions.create(
             model="dhenu2-in-8b-preview",
             messages=[
