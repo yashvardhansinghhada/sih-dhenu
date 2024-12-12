@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 # API Key and Endpoint
 API_URL = "https://api.dhenu.ai/v1"
+API_KEY = os.getenv("API_KEY")
 # Fetch from environment variables
 
 @app.route('/chat', methods=['POST'])
@@ -23,7 +24,7 @@ def chat():
 
 
         # Send request to Dhenu API
-        client = OpenAI(base_url="https://api.dhenu.ai/v1", api_key={dh-d_mYtfQEWSKSMCfPBVcjoNHuEStalCfnE1vKTiUy2vs})
+        client = OpenAI(base_url="https://api.dhenu.ai/v1", api_key={API_KEY})
         stream = client.chat.completions.create(
             model="dhenu2-in-8b-preview",
             messages=[
